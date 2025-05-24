@@ -1,19 +1,40 @@
 import cv2
 import pytesseract
-import numpy as np
+from config import OCR_CONFIG
+
+def is_blurry(image, threshold=100):
+    """Check if the image is blurry using Laplacian variance."""
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    fm = cv2.Laplacian(gray, cv2.CV_64F).var()
+    return fm < threshold
 
 def preprocess_and_ocr(image):
+    """Preprocess the image and extract text using OCR."""
+    # Skip if image is empty
+    if image is None or image.size == 0:
+        return ""
+
+    # Blur check
+    if is_blurry(image):
+        return ""
+
     # Convert to grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # Optional: Apply thresholding to improve OCR
-    _, thresh = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    # Apply CLAHE for contrast enhancement
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    enhanced = clahe.apply(gray)
 
-    # Optional: Resize to improve accuracy
-    resized = cv2.resize(thresh, None, fx=2, fy=2, interpolation=cv2.INTER_LINEAR)
+    # Denoise
+    denoised = cv2.fastNlMeansDenoising(enhanced, h=30)
 
-    # Run Tesseract OCR
-    custom_config = r'--oem 3 --psm 6'  # OEM 3 = default, PSM 6 = assume a block of text
-    text = pytesseract.image_to_string(resized, config=custom_config)
+    # Thresholding
+    _, thresh = cv2.threshold(denoised, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-    return text.strip()
+    # OCR
+    try:
+        custom_config = OCR_CONFIG + " --oem 3 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-:.()"
+        text = pytesseract.image_to_string(thresh, config=custom_config)
+        return text.strip()
+    except pytesseract.TesseractNotFoundError:
+        return "[ERROR] Tesseract not found."

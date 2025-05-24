@@ -1,13 +1,17 @@
 import cv2
-from config import SCOREBOARD_ROI
 import os
-
+SCOREBOARD_ROI = {
+    "x": 500,
+    "y": 622,
+    "w": 232,   
+    "h": 34
+}
 # Path to your match video
 VIDEO_PATH = "match_videos/sample_match2.mp4"
 
 # Frame number to save (e.g., 300)
 TARGET_FRAME = 30
-OUTPUT_IMAGE = "outputs/sample_frame_with_roi1.jpg"
+OUTPUT_IMAGE = "outputs/sample_frame_with_roi2.jpg"
 
 cap = cv2.VideoCapture(VIDEO_PATH)
 

@@ -1,9 +1,9 @@
 # Region of Interest for the scoreboard (x, y, width, height)
 SCOREBOARD_ROI = {
     "x": 0,
-    "y": 305,
-    "w": 640,   
-    "h": 55
+    "y": 609,
+    "w": 1280,   
+    "h": 110
 }
 
 # Video settings
