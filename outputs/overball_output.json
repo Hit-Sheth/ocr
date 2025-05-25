@@ -6,7 +6,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "",
-    "bowling_team": ""
+    "bowling_team": "",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 25,
@@ -15,7 +20,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 50,
@@ -24,7 +34,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN"
+    "bowling_team": "IN",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 75,
@@ -33,7 +48,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 100,
@@ -42,7 +62,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 125,
@@ -51,7 +76,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 150,
@@ -60,7 +90,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INP"
+    "bowling_team": "INP",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 175,
@@ -69,7 +104,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INP"
+    "bowling_team": "INP",
+    "four": false,
+    "six": false,
+    "one": true,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 200,
@@ -78,7 +118,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN"
+    "bowling_team": "IN",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 225,
@@ -87,7 +132,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN"
+    "bowling_team": "IN",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 250,
@@ -96,7 +146,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN"
+    "bowling_team": "IN",
+    "four": false,
+    "six": false,
+    "one": true,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 275,
@@ -105,7 +160,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 300,
@@ -114,7 +174,12 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 325,
@@ -123,7 +188,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": true,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 350,
@@ -132,7 +202,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INU"
+    "bowling_team": "INU",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 375,
@@ -141,7 +216,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 400,
@@ -150,7 +230,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN"
+    "bowling_team": "IN",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 425,
@@ -159,7 +244,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "IWO"
+    "bowling_team": "IWO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 450,
@@ -168,7 +258,12 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INU"
+    "bowling_team": "INU",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   },
   {
     "frame": 475,
@@ -177,6 +272,11 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO"
+    "bowling_team": "INO",
+    "four": false,
+    "six": false,
+    "one": false,
+    "two": false,
+    "wicket": false
   }
 ]

@@ -22,7 +22,6 @@ FPS = cap.get(cv2.CAP_PROP_FPS)
 FRAME_INTERVAL = int(FPS)
 cap.release()
 
-
 def extract_scoreboard_from_video():
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
@@ -87,7 +86,6 @@ def extract_scoreboard_from_video():
             if 'V' in team_line:
                 team_parts = team_line.split('V', 1)
                 bowling_team = re.sub(r'[^A-Z]', '', team_parts[0])
-                # Extract only the first word (team name) from team_parts[1]
                 batting_team = re.sub(r'[^A-Z]', '', team_parts[1].split()[0])
 
             # Extract batsman names
@@ -97,14 +95,28 @@ def extract_scoreboard_from_video():
                 stricker_batsman = re.sub(r'[^A-Z]', '', batsmen[0])
                 nonstricker_batsman = re.sub(r'[^A-Z]', '', batsmen[1])
 
-            # Swap batsmen if only 1 run difference (single)
-            if runs == previous_runs + 1:
+            # Calculate outcome deltas
+            run_delta = runs - previous_runs
+            wicket_delta = wickets - previous_wickets
+
+            # Swap strikers if single run
+            if run_delta % 2 == 1:
                 stricker_batsman, nonstricker_batsman = nonstricker_batsman, stricker_batsman
 
-            # Save current score for next iteration
+            # Save current state
             previous_runs = runs
             previous_wickets = wickets
 
+            # Outcome classification
+            outcome = {
+                "four": run_delta == 4,
+                "six": run_delta == 6,
+                "one": run_delta == 1,
+                "two": run_delta == 2,
+                "wicket": wicket_delta == 1
+            }
+
+            # Append OCR result
             ocr_results.append({
                 "frame": frame_count,
                 "timestamp": timestamp,
@@ -112,7 +124,8 @@ def extract_scoreboard_from_video():
                 "nonstricker_batsman": nonstricker_batsman,
                 "bowler": bowler_text,
                 "batting_team": batting_team,
-                "bowling_team": bowling_team
+                "bowling_team": bowling_team,
+                **outcome
             })
 
         frame_count += 1
@@ -124,6 +137,6 @@ def extract_scoreboard_from_video():
         json.dump(ocr_results, f, indent=2)
 
     print(f"OCR results saved to {OUTPUT_PATH}")
-
+    
 
 extract_scoreboard_from_video()
