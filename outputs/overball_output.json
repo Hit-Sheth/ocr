@@ -6,9 +6,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "",
-    "bowling_team": "",
-    "runs": 28,
-    "wickets": "ino.PAK28-2 )P) a"
+    "bowling_team": ""
   },
   {
     "frame": 25,
@@ -17,9 +15,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 28,
-    "wickets": "inovPAK28-2 yp a"
+    "bowling_team": "INO"
   },
   {
     "frame": 50,
@@ -28,9 +24,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN",
-    "runs": 28,
-    "wickets": "invvPAK28-2 yP) a"
+    "bowling_team": "IN"
   },
   {
     "frame": 75,
@@ -39,9 +33,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 28,
-    "wickets": "inovPAK28-2 yp) a"
+    "bowling_team": "INO"
   },
   {
     "frame": 100,
@@ -50,9 +42,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 28,
-    "wickets": "wo.PAK28-2 yP) a"
+    "bowling_team": "INO"
   },
   {
     "frame": 125,
@@ -61,9 +51,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 28,
-    "wickets": "ino.PAK28-2 yp) a"
+    "bowling_team": "INO"
   },
   {
     "frame": 150,
@@ -72,9 +60,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INP",
-    "runs": 28,
-    "wickets": "inpvPAK28-2 yp) Le"
+    "bowling_team": "INP"
   },
   {
     "frame": 175,
@@ -83,9 +69,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INP",
-    "runs": 29,
-    "wickets": "ino.PAK29-2 yp) Ly"
+    "bowling_team": "INP"
   },
   {
     "frame": 200,
@@ -94,9 +78,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN",
-    "runs": 29,
-    "wickets": "invvPAK29-2 yP 7"
+    "bowling_team": "IN"
   },
   {
     "frame": 225,
@@ -105,9 +87,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN",
-    "runs": 29,
-    "wickets": "invvPAK29-2 )P hy"
+    "bowling_team": "IN"
   },
   {
     "frame": 250,
@@ -116,9 +96,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN",
-    "runs": 30,
-    "wickets": "invvPAK30-2 yp ea"
+    "bowling_team": "IN"
   },
   {
     "frame": 275,
@@ -127,9 +105,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 30,
-    "wickets": "inovPAK30-2 yp) ee"
+    "bowling_team": "INO"
   },
   {
     "frame": 300,
@@ -138,9 +114,7 @@
     "nonstricker_batsman": "SHAN",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 30,
-    "wickets": "inovPAK30-2 yP) ee"
+    "bowling_team": "INO"
   },
   {
     "frame": 325,
@@ -149,9 +123,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 31,
-    "wickets": "inovPAK31-2 yP ea"
+    "bowling_team": "INO"
   },
   {
     "frame": 350,
@@ -160,9 +132,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INU",
-    "runs": 31,
-    "wickets": "inuvPAK31-2 ye) he"
+    "bowling_team": "INU"
   },
   {
     "frame": 375,
@@ -171,9 +141,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 31,
-    "wickets": "inovPAK31-2 ye) a"
+    "bowling_team": "INO"
   },
   {
     "frame": 400,
@@ -182,9 +150,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "VPAK",
-    "bowling_team": "IN",
-    "runs": 31,
-    "wickets": "invvPAK 31-2Ep ea"
+    "bowling_team": "IN"
   },
   {
     "frame": 425,
@@ -193,9 +159,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "IWO",
-    "runs": 31,
-    "wickets": "iwovPAK31-2 ye) ea"
+    "bowling_team": "IWO"
   },
   {
     "frame": 450,
@@ -204,9 +168,7 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INU",
-    "runs": 31,
-    "wickets": "inuvPAK31-2 yP ee"
+    "bowling_team": "INU"
   },
   {
     "frame": 475,
@@ -215,8 +177,6 @@
     "nonstricker_batsman": "IFTIKHAR",
     "bowler": "SHAMI",
     "batting_team": "PAK",
-    "bowling_team": "INO",
-    "runs": 31,
-    "wickets": "inovPAK31-2 yP) ae"
+    "bowling_team": "INO"
   }
 ]

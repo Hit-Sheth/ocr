@@ -38,3 +38,5 @@ def preprocess_and_ocr(image):
         return text.strip()
     except pytesseract.TesseractNotFoundError:
         return "[ERROR] Tesseract not found."
+    except Exception as e:
+        return f"[ERROR] OCR failed: {str(e)}"

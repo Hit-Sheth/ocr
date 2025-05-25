@@ -58,7 +58,7 @@ def extract_scoreboard_from_video():
 
             if scoreboard_img.size == 0 or batsman_img.size == 0 or bowler_img.size == 0:
                 print(f"Empty ROI at frame {frame_count}. Skipping.")
-                continue
+                continue 
 
             # OCR text
             scoreboard_text = preprocess_and_ocr(scoreboard_img)
@@ -112,9 +112,7 @@ def extract_scoreboard_from_video():
                 "nonstricker_batsman": nonstricker_batsman,
                 "bowler": bowler_text,
                 "batting_team": batting_team,
-                "bowling_team": bowling_team,
-                "runs": runs,
-                "wickets": scoreboard_text
+                "bowling_team": bowling_team
             })
 
         frame_count += 1

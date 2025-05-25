@@ -1,10 +1,11 @@
 import cv2
 import os
+from utils.ocr_helpers import preprocess_and_ocr
 SCOREBOARD_ROI = {
-    "x": 500,
-    "y": 622,
-    "w": 232,   
-    "h": 34
+     "x": 715,  # move right
+    "y": 620,  # align a bit higher
+    "w": 60,   # tighten width around the number
+    "h": 35
 }
 # Path to your match video
 VIDEO_PATH = "match_videos/sample_match2.mp4"
@@ -31,8 +32,9 @@ while True:
         x, y, w, h = SCOREBOARD_ROI.values()
         # Draw rectangle on frame
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        
+        bowler_img = frame[y:y+h, x:x+w]
         # Save image
+        print(preprocess_and_ocr(bowler_img))
         os.makedirs("outputs", exist_ok=True)
         cv2.imwrite(OUTPUT_IMAGE, frame)
         print(f"Saved frame {TARGET_FRAME} with ROI to {OUTPUT_IMAGE}")
