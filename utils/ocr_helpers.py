@@ -1,6 +1,9 @@
 import cv2
-import pytesseract
-from config import OCR_CONFIG
+import numpy as np
+import easyocr
+
+# Initialize EasyOCR reader once
+reader = easyocr.Reader(['en'])
 
 def is_blurry(image, threshold=100):
     """Check if the image is blurry using Laplacian variance."""
@@ -9,8 +12,7 @@ def is_blurry(image, threshold=100):
     return fm < threshold
 
 def preprocess_and_ocr(image):
-    """Preprocess the image and extract text using OCR."""
-    # Skip if image is empty
+    """Preprocess the image and extract text using EasyOCR."""
     if image is None or image.size == 0:
         return ""
 
@@ -21,22 +23,19 @@ def preprocess_and_ocr(image):
     # Convert to grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # Apply CLAHE for contrast enhancement
+    # Enhance contrast
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
     enhanced = clahe.apply(gray)
 
-    # Denoise
+    # Denoising
     denoised = cv2.fastNlMeansDenoising(enhanced, h=30)
 
-    # Thresholding
-    _, thresh = cv2.threshold(denoised, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    # Invert for better OCR (sometimes helps)
+    inverted = cv2.bitwise_not(denoised)
 
-    # OCR
+    # Run EasyOCR
     try:
-        custom_config = OCR_CONFIG + " --oem 3 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-:.()"
-        text = pytesseract.image_to_string(thresh, config=custom_config)
-        return text.strip()
-    except pytesseract.TesseractNotFoundError:
-        return "[ERROR] Tesseract not found."
+        results = reader.readtext(inverted, detail=0)
+        return " ".join(results).strip()
     except Exception as e:
-        return f"[ERROR] OCR failed: {str(e)}"
+        return f"[ERROR] EasyOCR failed: {str(e)}"
